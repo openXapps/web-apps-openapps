@@ -1,14 +1,14 @@
 import React from 'react';
 
-const appListClassDefault = 'list-group-item list-group-item-action gd-list-items';
+const appListClassDefault = 'list-group-item list-group-item-action gd-list-items bg-dark';
 
 const Apps = ({ cookiesAccepted }) => {
   const [appListClass, setAppListClass] = React.useState(appListClassDefault);
 
   React.useEffect(() => {
     // console.log('Apps: cookiesAccepted...', cookiesAccepted);
-    if (cookiesAccepted) setAppListClass(appListClassDefault + ' bg-secondary text-white');
-    if (!cookiesAccepted) setAppListClass(appListClassDefault + ' bg-secondary text-mute disabled');
+    if (cookiesAccepted) setAppListClass(appListClassDefault + ' text-white');
+    if (!cookiesAccepted) setAppListClass(appListClassDefault + ' text-mute disabled');
     // Effect clean-up function
     return () => true;
   }, [cookiesAccepted]);

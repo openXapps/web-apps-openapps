@@ -15,12 +15,13 @@ const Github = () => {
 };
 
 const Home = () => {
-  const [cookiesAccepted, setCookiesAccepted] = React.useState(false);
+  const [cookiesAccepted, setCookiesAccepted] = React.useState(true);
 
   React.useEffect(() => {
     const cookies = decodeURIComponent(document.cookie);
     // console.log('Home: cookies...', cookies);
-    if (cookies.indexOf('gd_openapps_accept=Yes') > -1) setCookiesAccepted(true);
+    if (!cookiesAccepted && cookies.indexOf('gd_openapps_accept=Yes') > -1) setCookiesAccepted(true);
+    if (cookiesAccepted && cookies.indexOf('gd_openapps_accept=Yes') === -1) setCookiesAccepted(false);
     // Effect clean-up function
     return () => true;
   }, []);
