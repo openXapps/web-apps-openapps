@@ -27,8 +27,8 @@ const Home = () => {
 
   const handleAcceptCookies = (e) => {
     let d = new Date();
-    // d.setTime(d.getTime() + (30 * 24 * 60 * 60 * 1000));
-    d.setTime(d.getTime() + (60 * 1000)); // Test cookie
+    d.setTime(d.getTime() + (30 * 24 * 60 * 60 * 1000));
+    // d.setTime(d.getTime() + (60 * 1000)); // Test cookie
     const expires = `expires=${d.toUTCString()}`;
     document.cookie = `gd_openapps_accept=Yes;expires=${expires};`;
     setCookiesAccepted(true);
