@@ -40,7 +40,7 @@ const Home = () => {
             href="apps/web-apps-bookmarker"
           >Bookmarker</a>
         </div>
-        <p className="text-center text-monospace mx-auto w-75 mt-3">More apps coming soon...</p>
+        <p className="text-center text-monospace mx-auto w-75 mt-3">Watch this space for new apps ...</p>
         <p className="text-center text-monospace mx-auto w-75 mt-2">Find me on <Github /></p>
       </div>
       <Disclaimer />

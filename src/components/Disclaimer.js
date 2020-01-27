@@ -51,8 +51,9 @@ const Disclaimer = () => {
     <div className="fixed-bottom bg-dark">
       <div className="container">
         {hideDisclaimer ? (
-          <div className="text-monospace text-center my-1">
-            <small>No annoying ads! Enjoy <span className="h4">{emojis.grinningFaceWithBigEyes}</span></small>
+          <div
+            className="text-monospace text-center my-1"
+          >No ads! Enjoy <span className="h4">{emojis.grinningFaceWithBigEyes}</span>
           </div>
         ) : (
             <>
