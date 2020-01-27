@@ -20,6 +20,8 @@ const Storage = () => {
   )
 };
 
+const emojis = { grinningFaceWithBigEyes: "😃" };
+
 const Disclaimer = () => {
   const [hideDisclaimer, setHideDisclaimer] = useState(true);
 
@@ -50,7 +52,7 @@ const Disclaimer = () => {
       <div className="container">
         {hideDisclaimer ? (
           <div className="text-monospace text-center my-1">
-            <small>No annoying ads! Enjoy <span className="h4">😃</span></small>
+            <small>No annoying ads! Enjoy <span className="h4">{emojis.grinningFaceWithBigEyes}</span></small>
           </div>
         ) : (
             <>
