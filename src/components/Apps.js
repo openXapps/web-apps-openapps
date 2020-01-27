@@ -1,20 +1,18 @@
 import React from 'react';
 
-const appListClassDefault = 'list-group-item list-group-item-action gd-list-items bg-secondary text-white';
+const appListClassDefault = 'list-group-item list-group-item-action gd-list-items';
 
 const Apps = ({ cookiesAccepted }) => {
   const [appListClass, setAppListClass] = React.useState(appListClassDefault);
 
   React.useEffect(() => {
-    if (!cookiesAccepted) setAppListClass(appListClassDefault);
-    if (!cookiesAccepted) setAppListClass(appListClassDefault + ' disabled');
-
+    // console.log('Apps: cookiesAccepted...', cookiesAccepted);
+    if (cookiesAccepted) setAppListClass(appListClassDefault + ' bg-secondary text-white');
+    if (!cookiesAccepted) setAppListClass(appListClassDefault + ' bg-secondary text-mute disabled');
     // Effect clean-up function
     return () => true;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cookiesAccepted]);
 
-  console.log('Apps: cookiesAccepted...', cookiesAccepted);
 
   return (
     <div className="list-group text-center mx-auto gd-list-items">

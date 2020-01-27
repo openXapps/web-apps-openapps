@@ -19,16 +19,10 @@ const Home = () => {
 
   React.useEffect(() => {
     const cookies = decodeURIComponent(document.cookie);
-    // console.log('Home: cookies.........', cookies);
-    if (cookiesAccepted && cookies.indexOf('gd_openapps_accept=Yes') === -1) {
-      setTimeout(() => {
-        setCookiesAccepted(false);
-      }, 1000);
-    }
-
+    // console.log('Home: cookies...', cookies);
+    if (cookies.indexOf('gd_openapps_accept=Yes') > -1) setCookiesAccepted(true);
     // Effect clean-up function
     return () => true;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleAcceptCookies = (e) => {
