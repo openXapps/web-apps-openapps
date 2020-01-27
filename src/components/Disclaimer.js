@@ -20,7 +20,7 @@ const Storage = () => {
   )
 };
 
-const HomeDisclaimer = () => {
+const Disclaimer = () => {
   const [hideDisclaimer, setHideDisclaimer] = useState(true);
 
   useEffect(() => {
@@ -49,8 +49,8 @@ const HomeDisclaimer = () => {
     <div className="fixed-bottom bg-dark">
       <div className="container">
         {hideDisclaimer ? (
-          <div className="text-success text-monospace text-small text-center my-2">
-            <small>Enjoy an ad-free website!</small>
+          <div className="text-monospace text-center my-1">
+            <small>No annoying ads! Enjoy <span className="h4">😃</span></small>
           </div>
         ) : (
             <>
@@ -59,7 +59,7 @@ const HomeDisclaimer = () => {
               </div>
               <div className="my-2">
                 <button
-                  className="btn btn-sm btn-block btn-outline-danger"
+                  className="btn btn-sm btn-block btn-outline-primary"
                   onClick={handleAccept}
                 >I accept and remove this message for the next 30 days</button>
               </div>
@@ -70,4 +70,4 @@ const HomeDisclaimer = () => {
   )
 };
 
-export default HomeDisclaimer;
+export default Disclaimer;

@@ -1,14 +1,22 @@
 import React from 'react';
 
 // Sub-components
-import HomeDisclaimer from './HomeDisclaimer';
+import Disclaimer from './Disclaimer';
 
 // Utilities and Assets
 import logo from '../assets/img-OpenApps.png';
-import '../assets/Home.scss';
 
-// Routing setup on home page
 const Home = () => {
+  const Github = () => {
+    return (
+      <a
+        href="https://github.com/openXapps/web-apps-openapps"
+        target="_blank"
+        rel="noopener noreferrer"
+      >GitHub</a>
+    )
+  };
+
   return (
     <>
       <div className="container">
@@ -20,21 +28,22 @@ const Home = () => {
         </div>
         <div className="list-group text-center mx-auto gd-list-items">
           <a
-            className="list-group-item list-group-item-action gd-list-items"
+            className="list-group-item list-group-item-action gd-list-items bg-secondary text-white"
             href="apps/web-apps-moviedb"
           >Movies info</a>
           <a
-            className="list-group-item list-group-item-action gd-list-items"
+            className="list-group-item list-group-item-action gd-list-items bg-secondary text-white"
             href="apps/web-apps-notes"
-          >Notes</a>
+          >Quick notes</a>
           <a
-            className="list-group-item list-group-item-action gd-list-items"
+            className="list-group-item list-group-item-action gd-list-items bg-secondary text-white"
             href="apps/web-apps-bookmarker"
           >Bookmarker</a>
         </div>
         <p className="text-center text-monospace mx-auto w-75 mt-3">More apps coming soon...</p>
+        <p className="text-center text-monospace mx-auto w-75 mt-2">Find me on <Github /></p>
       </div>
-      <HomeDisclaimer />
+      <Disclaimer />
     </>
   );
 };

@@ -1,14 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-// Import application component
+// Routes
 import Home from './components/Home';
 
-class App extends Component {
-  render() {
-    return (
-      <Home />
-    );
-  }
+const App = () => {
+  // https://medium.com/@svinkle/how-to-deploy-a-react-app-to-a-subdirectory-f694d46427c1
+  const root = '/';
+  return (
+    <BrowserRouter basename={root}>
+      <Switch>
+        <Route path="/" exact>
+          <Home />
+        </Route>
+      </Switch>
+    </BrowserRouter>
+  );
 }
 
 export default App;
