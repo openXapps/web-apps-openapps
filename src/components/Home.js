@@ -4,7 +4,7 @@ import React from 'react';
 import Disclaimer from './Disclaimer';
 
 // Utilities and Assets
-import logo from '../assets/img-OpenApps.png';
+import logo from '../assets/openapps.png';
 
 const Home = () => {
   const Github = () => {
