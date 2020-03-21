@@ -15,19 +15,28 @@ const Apps = ({ cookiesAccepted }) => {
 
 
   return (
-    <div className="list-group text-center mx-auto gd-list-items">
+    <div className="list-group text-center mx-auto">
       <a
         className={appListClass}
         href="apps/web-apps-moviedb"
-      >Movies info</a>
+      >
+        <div className="gd-list-items">Movies info</div>
+        <div className="text-muted h6">Get movie details and submit your anonymous ratings</div>
+      </a>
       <a
         className={appListClass}
-        href="apps/web-apps-notes"
-      >Quick notes</a>
+        href="apps/notes"
+        >
+          <div className="gd-list-items">Quick notes</div>
+          <div className="text-muted h6">Make quick notes and save them to your device</div>
+        </a>
       <a
         className={appListClass}
         href="apps/web-apps-bookmarker"
-      >Bookmarker</a>
+        >
+          <div className="gd-list-items">Bookmarker</div>
+          <div className="text-muted h6">Bookmark your favourite sites and save them too your device</div>
+        </a>
     </div>
   );
 };
