@@ -24,7 +24,7 @@ const Home = () => {
     if (cookiesAccepted && cookies.indexOf('gd_openapps_accept=Yes') === -1) setCookiesAccepted(false);
     // Effect clean-up function
     return () => true;
-  }, []);
+  }, [cookiesAccepted]);
 
   const handleAcceptCookies = (e) => {
     let d = new Date();
