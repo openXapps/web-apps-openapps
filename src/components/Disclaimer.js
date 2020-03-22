@@ -35,7 +35,7 @@ const Disclaimer = ({ cookiesAccepted, handleAcceptCookies }) => {
         ) : (
             <>
               <div className="text-muted text-monospace text-center">
-                <small>We use <Cookie /> and <Storage /> to give you the best online experience. By continuing you agree. Do you accept?</small>
+                <small>We use <Cookie /> and <Storage /> to give you the best online experience. Do you accept and would like to continuing?</small>
               </div>
               <div className="my-2">
                 <button
