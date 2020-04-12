@@ -32,7 +32,7 @@ const Apps = ({ cookiesAccepted }) => {
         </a>
       <a
         className={appListClass}
-        href="apps/web-apps-bookmarker"
+        href="apps/bookmarker"
         >
           <div className="gd-list-items">Bookmarker</div>
           <div className="text-muted h6">Bookmark your favourite sites and save them to your device</div>
