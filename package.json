@@ -1,6 +1,6 @@
 {
   "name": "web-apps-openapps",
-  "version": "0.4.6",
+  "version": "0.4.7",
   "private": true,
   "homepage": "https://www.openapps.co.za/",
   "keywords": [
@@ -27,6 +27,7 @@
     "react-scripts": "^3.3.0"
   },
   "scripts": {
+    "dev": "BROWSER=none react-scripts start",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
