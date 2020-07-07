@@ -44,7 +44,7 @@ const Home = () => {
         <p className="text-secondary gd-sub-title">open source utilities to be used freely</p>
       </div>
       <Apps cookiesAccepted={cookiesAccepted} />
-      <p className="text-center text-monospace mx-auto w-75 mt-3">Watch this space for new apps ...</p>
+      {/* <p className="text-center text-monospace mx-auto w-75 mt-3">Watch this space for new apps ...</p> */}
       <p className="text-center text-monospace mx-auto w-75 mt-2">Find me on <Github /></p>
       <Disclaimer cookiesAccepted={cookiesAccepted} handleAcceptCookies={handleAcceptCookies} />
     </div>
