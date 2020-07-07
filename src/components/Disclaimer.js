@@ -9,7 +9,6 @@ const Cookie = () => {
     >cookies</a>
   )
 };
-
 const Storage = () => {
   return (
     <a
@@ -19,22 +18,30 @@ const Storage = () => {
     >local storage</a>
   )
 };
-
+const Github = () => {
+  return (
+    <a
+      href="https://github.com/openXapps/web-apps-openapps"
+      target="_blank"
+      rel="noopener noreferrer"
+    >GitHub</a>
+  )
+};
 const emojis = { grinningFaceWithBigEyes: "😃" };
 
 const Disclaimer = ({ cookiesAccepted, handleAcceptCookies }) => {
 
   return (
-    <div className="fixed-bottom bg-dark">
+    <div className="fixed-bottom gd-disclaimer-bg">
       <div className="container">
         {cookiesAccepted ? (
           <div
             className="text-monospace text-center my-1"
-          >No ads! Enjoy <span className="h4">{emojis.grinningFaceWithBigEyes}</span>
+          >No ads! Enjoy <span className="h4">{emojis.grinningFaceWithBigEyes}</span> Find me on <Github />
           </div>
         ) : (
             <>
-              <div className="text-muted text-monospace text-center">
+              <div className="text-monospace text-center">
                 <small>We use <Cookie /> and <Storage /> to give you the best online experience. Do you accept?</small>
               </div>
               <div className="my-2">

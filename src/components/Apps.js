@@ -28,12 +28,11 @@ const Apps = ({ cookiesAccepted }) => {
     return () => true;
   }, [cookiesAccepted]);
 
-
   return (
     <div className="list-group text-center mx-auto">
       {appList.map((v, i) => {
         return (
-          <a className={appListClass} href={v.url}>
+          <a className={appListClass} href={v.url} key={i}>
             <div className="gd-list-items">{v.title}</div>
             <div className="text-muted h6">{v.description}</div>
           </a>

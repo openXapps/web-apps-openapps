@@ -1,18 +1,7 @@
 import React from 'react';
-
 import Apps from './Apps';
 import Disclaimer from './Disclaimer';
 import logo from '../assets/openapps.png';
-
-const Github = () => {
-  return (
-    <a
-      href="https://github.com/openXapps/web-apps-openapps"
-      target="_blank"
-      rel="noopener noreferrer"
-    >GitHub</a>
-  )
-};
 
 const Home = () => {
   const [cookiesAccepted, setCookiesAccepted] = React.useState(true);
@@ -44,8 +33,6 @@ const Home = () => {
         <p className="text-secondary gd-sub-title">open source utilities to be used freely</p>
       </div>
       <Apps cookiesAccepted={cookiesAccepted} />
-      {/* <p className="text-center text-monospace mx-auto w-75 mt-3">Watch this space for new apps ...</p> */}
-      <p className="text-center text-monospace mx-auto w-75 mt-2">Find me on <Github /></p>
       <Disclaimer cookiesAccepted={cookiesAccepted} handleAcceptCookies={handleAcceptCookies} />
     </div>
   );
