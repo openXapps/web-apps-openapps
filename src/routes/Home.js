@@ -1,12 +1,19 @@
-import React from 'react';
-import Apps from './Apps';
-import Disclaimer from './Disclaimer';
+import { useState, useEffect } from 'react';
+
+import Container from '@mui/material/Container';
+// import Paper from '@mui/material/Paper';
+import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
+
+import Apps from '../components/Apps';
+import Disclaimer from '../components/Disclaimer';
 import logo from '../assets/openapps.png';
 
 const Home = () => {
-  const [cookiesAccepted, setCookiesAccepted] = React.useState(true);
+  const [cookiesAccepted, setCookiesAccepted] = useState(true);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const cookies = decodeURIComponent(document.cookie);
     // console.log('Home: cookies...', cookies);
     if (!cookiesAccepted && cookies.indexOf('gd_openapps_accept=Yes') > -1) setCookiesAccepted(true);
@@ -25,16 +32,15 @@ const Home = () => {
   }
 
   return (
-    <div className="container">
-      <div className="text-center text-monospace">
-        <p
-          className="text-secondary my-3 gd-title"
-        ><img className="mr-2" src={logo} alt="Logo" id="gd-img-logo" />OpenApps</p>
-        <p className="text-secondary gd-sub-title">open source utilities to be used freely</p>
-      </div>
+    <Container maxWidth="md">
+      <Stack direction="row" spacing={2} alignItems="center" justifyContent="center" my={2}>
+        <Box component="img" src={logo} alt="Logo" sx={{ width: { xs: 40, sm: 64 }, height: { xs: 40, sm: 64 } }} />
+        <Typography variant="h4">OpenApps</Typography>
+      </Stack>
+      <Typography textAlign="center">open source utilities to be used freely</Typography>
       <Apps cookiesAccepted={cookiesAccepted} />
       <Disclaimer cookiesAccepted={cookiesAccepted} handleAcceptCookies={handleAcceptCookies} />
-    </div>
+    </Container>
   );
 };
 

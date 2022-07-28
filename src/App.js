@@ -1,20 +1,28 @@
-import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+// Material UI
+import CssBaseline from '@mui/material/CssBaseline';
+import { ThemeProvider } from '@mui/material/styles';
+import { createTheme } from '@mui/material/styles';
 
 // Routes
-import Home from './components/Home';
+import Home from './routes/Home';
 
-const App = () => {
-  // https://medium.com/@svinkle/how-to-deploy-a-react-app-to-a-subdirectory-f694d46427c1
-  const root = '/';
+// Config
+import dark from './assets/dark';
+
+function App() {
+  const appTheme = createTheme(dark);
+
   return (
-    <BrowserRouter basename={root}>
-      <Switch>
-        <Route path="/" exact>
-          <Home />
-        </Route>
-      </Switch>
-    </BrowserRouter>
+    <ThemeProvider theme={appTheme}>
+      <CssBaseline />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 
