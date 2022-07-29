@@ -1,12 +1,8 @@
-// import { useEffect } from 'react';
-
 import Paper from '@mui/material/Paper';
-// import Box from '@mui/material/Box';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 
-// const appListClassDefault = 'list-group-item list-group-item-action gd-list-items bg-dark';
 const appList = [
   {
     title: 'Movies info',
@@ -22,26 +18,13 @@ const appList = [
     url: 'apps/bookmarker'
   }, {
     title: 'CryptoPASS',
-    description: 'Manage you passwords securely',
+    description: 'Manage your passwords securely',
     url: 'apps/cryptopass'
   }
 ];
 
 const Apps = ({ cookiesAccepted }) => {
-  // const smallScreen = useMediaQuery(theme.breakpoints.down('sm'));
-  // const [listEnabled, setListEnabled] = useState(false);
-  // const [appListClass, setAppListClass] = React.useState(appListClassDefault);
-
-  // useEffect(() => {
-  // console.log('Apps: cookiesAccepted...', cookiesAccepted);
-  // if (cookiesAccepted) setListEnabled(true);
-  // if (!cookiesAccepted) setListEnabled(false);
-  // Effect clean-up function
-  //   return () => true;
-  // }, [cookiesAccepted]);
-
   return (
-    // <Box width="100%" m={1}>
     <Paper sx={{ p: 2, mt: { xs: 1, sm: 2 } }}>
       <List>
         {appList.map((v, i) => {
@@ -52,9 +35,7 @@ const Apps = ({ cookiesAccepted }) => {
                 button
                 component="a"
                 href={v.url}
-              // disabled={!cookiesAccepted}
-              // target="_blank"
-              // rel="noopener"
+                disabled={!cookiesAccepted}
               >
                 <ListItemText
                   sx={{ pl: 1, textAlign: 'center' }}
@@ -67,7 +48,6 @@ const Apps = ({ cookiesAccepted }) => {
           );
         })}
       </List>
-      {/* </Box> */}
     </Paper>
   );
 };

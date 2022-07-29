@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 import Container from '@mui/material/Container';
-// import Paper from '@mui/material/Paper';
+import Toolbar from '@mui/material/Toolbar';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
@@ -32,15 +32,18 @@ const Home = () => {
   }
 
   return (
-    <Container maxWidth="md">
-      <Stack direction="row" spacing={2} alignItems="center" justifyContent="center" my={2}>
-        <Box component="img" src={logo} alt="Logo" sx={{ width: { xs: 40, sm: 64 }, height: { xs: 40, sm: 64 } }} />
-        <Typography variant="h4">OpenApps</Typography>
-      </Stack>
-      <Typography textAlign="center">open source utilities to be used freely</Typography>
-      <Apps cookiesAccepted={cookiesAccepted} />
+    <>
+      <Container maxWidth="sm">
+        <Stack direction="row" spacing={2} alignItems="center" justifyContent="center" my={2}>
+          <Box component="img" src={logo} alt="Logo" sx={{ width: { xs: 40, sm: 64 }, height: { xs: 40, sm: 64 } }} />
+          <Typography variant="h4">OpenApps</Typography>
+        </Stack>
+        <Typography textAlign="center">open source utilities to be used freely</Typography>
+        <Apps cookiesAccepted={cookiesAccepted} />
+      </Container>
+      <Toolbar />
       <Disclaimer cookiesAccepted={cookiesAccepted} handleAcceptCookies={handleAcceptCookies} />
-    </Container>
+    </>
   );
 };
 

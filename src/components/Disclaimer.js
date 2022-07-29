@@ -1,6 +1,5 @@
-import Container from '@mui/material/Container';
+import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 
@@ -41,43 +40,42 @@ const Disclaimer = ({ cookiesAccepted, handleAcceptCookies }) => {
   return (
     <Box
       display="flex"
-      // justifyContent="center"
+      flexDirection="column"
+      justifyContent="center"
       position="fixed"
-      bottom={10}
-      // width={1}
+      bottom={0}
+      width={1}
     >
-      {/* <Typography
-        variant="caption"
-      >No ads! Enjoy <span>{emojis.grinningFaceWithBigEyes}</span> and visit me on <Github /></Typography> */}
-      <Paper>
-        <Typography>We use <Cookie /> and <Storage /> to give you the best online experience. Do you accept?</Typography>
-      </Paper>
+      <Box sx={{
+        bgcolor: 'background.paper',
+        zIndex: 'tooltip',
+        display: 'flex',
+        flexDirection: 'column',
+        p: 2,
+        opacity: 0.9
+      }}>
+        {cookiesAccepted ? (
+          <Typography
+            textAlign="center"
+            variant="caption"
+            // sx={{ mb: 1 }}
+          >No ads! Enjoy <span>{emojis.grinningFaceWithBigEyes}</span> and visit me on <Github /></Typography>
+        ) : (
+          <>
+            <Typography
+              textAlign="center"
+              variant="caption"
+            >This site makes use of <Cookie /> and <Storage /> to give you the best online experience. Do you accept?</Typography>
+            <Button color="warning" onClick={handleAcceptCookies}>Yes I do</Button>
+            <Typography
+              textAlign="center"
+              variant="caption"
+            >this message will be removed for 30 days once accepted</Typography>
+          </>
+        )}
+      </Box>
     </Box>
   )
 };
-
-// <div className="fixed-bottom gd-disclaimer-bg">
-//   <div className="container">
-//     {cookiesAccepted ? (
-//       <div
-//         className="text-monospace text-center my-1"
-//       >No ads! Enjoy <span className="h4">{emojis.grinningFaceWithBigEyes}</span> Find me on <Github />
-//       </div>
-//     ) : (
-//         <>
-//           <div className="text-monospace text-center">
-//             <small>We use <Cookie /> and <Storage /> to give you the best online experience. Do you accept?</small>
-//           </div>
-//           <div className="my-2">
-//             <button
-//               className="btn btn-sm btn-block btn-outline-primary"
-//               onClick={handleAcceptCookies}
-//             >Yes I do</button>
-//           </div>
-//           <div className="mb-2 text-center"><small>this message will be removed for 30 days once accepted</small></div>
-//         </>
-//       )}
-//   </div>
-// </div>
 
 export default Disclaimer;
