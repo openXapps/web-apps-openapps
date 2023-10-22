@@ -1,15 +1,17 @@
 {
   "name": "web-apps-openapps",
-  "version": "0.4.8",
+  "version": "0.4.9",
   "private": true,
-  "homepage": "https://www.openapps.co.za/",
+  "homepage": "https://openapps.co.za/",
   "keywords": [
     "openapps",
     "movies",
     "notes",
     "bookmarker",
     "password",
-    "crypto"
+    "crypto",
+    "todo",
+    "shopping"
   ],
   "description": "Innovative web apps for everyone to enjoy freely",
   "repository": {

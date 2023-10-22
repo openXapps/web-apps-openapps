@@ -20,6 +20,10 @@ const appList = [
     title: 'CryptoPASS',
     description: 'Manage your passwords securely',
     url: 'apps/cryptopass'
+  }, {
+    title: 'MyLIST',
+    description: 'Manage a shopping or to-do list quick and easy',
+    url: 'apps/mylist'
   }
 ];
 
